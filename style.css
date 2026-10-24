@@ -12,8 +12,8 @@ h2{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:1px;m
 .sm{font-size:12px;color:var(--mut)}.big{font-size:30px;font-weight:700}.b{font-weight:600}
 .bar{height:6px;background:var(--soft);margin-top:4px}.bar i{display:block;height:100%;background:#000}
 .bar i.over{background:repeating-linear-gradient(45deg,#000,#000 3px,#fff 3px,#fff 6px);outline:1px solid #000}
-#tabs{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:560px;display:flex;justify-content:center;background:var(--bg);border-top:1px solid var(--bd);padding:8px 0 max(8px,env(safe-area-inset-bottom))}
-#addbtn{background:#000;color:#fff;border:0;width:52px;height:52px;border-radius:50%;font-size:30px;line-height:1;margin-top:-30px;border:3px solid #fff;box-shadow:0 0 0 1px #000;cursor:pointer}
+#tabs{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:560px;display:flex;justify-content:space-around;align-items:center;background:var(--bg);border-top:1px solid var(--bd);padding:8px 0 max(8px,env(safe-area-inset-bottom))}
+#addbtn{flex:none;background:#000;color:#fff;border:0;width:52px;height:52px;border-radius:50%;font-size:30px;line-height:1;margin-top:-30px;border:3px solid #fff;box-shadow:0 0 0 1px #000;cursor:pointer}
 main{padding-bottom:100px}
 #sheet{position:fixed;inset:0;background:#0008;z-index:9;display:flex;align-items:flex-end;justify-content:center}
 #sheet[hidden]{display:none}
@@ -25,4 +25,15 @@ input{width:100%;padding:10px;border:1px solid #000;border-radius:6px;background
 .chip.on{background:#000;color:#fff}
 button.pri{background:#000;color:#fff;border:0;border-radius:6px;padding:13px;font-size:16px;font-weight:600;width:100%;margin-top:12px;cursor:pointer}
 .x{background:none;border:0;font-size:16px;cursor:pointer}
+button.sec{background:#fff;color:#000;border:1px solid #000;border-radius:6px;padding:7px 14px;font-size:14px;cursor:pointer}
+button.sec:active{background:#000;color:#fff}
 .empty{text-align:center;color:var(--mut);padding:30px 0;border:1px dashed var(--bd);border-radius:6px}
+#tabs [data-v]{flex:1;background:none;border:0;color:var(--mut);font-size:14px;padding:8px 18px;cursor:pointer}
+#tabs [data-v].on{color:#000;font-weight:700;border-bottom:2px solid #000}
+.hb{display:grid;grid-template-columns:100px 1fr 70px;align-items:center;gap:10px}
+.hb+.hb{margin-top:12px}.hb .bar{margin:0;height:10px}.hv{text-align:right;font-size:13px}.hl{font-size:14px}
+.side{flex:1;display:flex}
+#tabs [data-v]{padding:8px 4px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}.cols .card{padding:10px}.cols .chip{padding:5px 8px;font-size:12px}
+.tg{flex:none;width:44px;height:24px;border-radius:12px;border:1px solid #000;background:#fff;padding:0;position:relative;cursor:pointer}.tg i{position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#000;transition:left .15s}.tg.on{background:#000}.tg.on i{left:22px;background:#fff}
+.cols{gap:0}.cols>div:first-child{padding-right:12px}.cols>div+div{padding-left:12px;border-left:1px solid #000}
